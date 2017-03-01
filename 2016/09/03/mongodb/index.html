@@ -15,16 +15,63 @@
 
 
 
-<meta name="description" content="阻止a标签跳转1234567&amp;lt;a href=&quot;#&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--点击后会跳到当前页面的头部--&amp;gt;&amp;lt;a href=&quot;#id&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--会跳转到指定标签的位置--&amp;gt;&amp;lt;a href=&quot;###&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--在数据库中有的时候会被当作注释--&amp;gt;&amp;lt;a href=&quot;javas">
+<meta name="description" content="MongoDB数据库概念
+数据库：一个电子化的文件柜
+
+数据库就是为我们方便的管理数据的一个平台，例如对数据的存储、修改、查询等都非常的方便。
+数据库分类数据库产品有很多，以下是一些常见的数据库产品：
+
+MySQL
+Oracle
+DB2
+SqlServer
+MongoDB
+etc.
+
+数据库没有排名之分，各有各的应用场景，我们这里学习的是 MongoDB 数据库。
+MongoDB 数据库
+为了更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="几个小专题">
-<meta property="og:url" content="http://yoursite.com/2015/04/02/专题/index.html">
+<meta property="og:title" content="MongoDB">
+<meta property="og:url" content="http://yoursite.com/2016/09/03/mongodb/index.html">
 <meta property="og:site_name" content="依旋的个人博客">
-<meta property="og:description" content="阻止a标签跳转1234567&amp;lt;a href=&quot;#&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--点击后会跳到当前页面的头部--&amp;gt;&amp;lt;a href=&quot;#id&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--会跳转到指定标签的位置--&amp;gt;&amp;lt;a href=&quot;###&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--在数据库中有的时候会被当作注释--&amp;gt;&amp;lt;a href=&quot;javas">
-<meta property="og:updated_time" content="2017-02-28T13:00:19.729Z">
+<meta property="og:description" content="MongoDB数据库概念
+数据库：一个电子化的文件柜
+
+数据库就是为我们方便的管理数据的一个平台，例如对数据的存储、修改、查询等都非常的方便。
+数据库分类数据库产品有很多，以下是一些常见的数据库产品：
+
+MySQL
+Oracle
+DB2
+SqlServer
+MongoDB
+etc.
+
+数据库没有排名之分，各有各的应用场景，我们这里学习的是 MongoDB 数据库。
+MongoDB 数据库
+为了更好">
+<meta property="og:image" content="http://yoursite.com/img/mongodb数据存储结构.png">
+<meta property="og:updated_time" content="2017-03-01T12:55:09.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="几个小专题">
-<meta name="twitter:description" content="阻止a标签跳转1234567&amp;lt;a href=&quot;#&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--点击后会跳到当前页面的头部--&amp;gt;&amp;lt;a href=&quot;#id&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--会跳转到指定标签的位置--&amp;gt;&amp;lt;a href=&quot;###&quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;!--在数据库中有的时候会被当作注释--&amp;gt;&amp;lt;a href=&quot;javas">
+<meta name="twitter:title" content="MongoDB">
+<meta name="twitter:description" content="MongoDB数据库概念
+数据库：一个电子化的文件柜
+
+数据库就是为我们方便的管理数据的一个平台，例如对数据的存储、修改、查询等都非常的方便。
+数据库分类数据库产品有很多，以下是一些常见的数据库产品：
+
+MySQL
+Oracle
+DB2
+SqlServer
+MongoDB
+etc.
+
+数据库没有排名之分，各有各的应用场景，我们这里学习的是 MongoDB 数据库。
+MongoDB 数据库
+为了更好">
+<meta name="twitter:image" content="http://yoursite.com/img/mongodb数据存储结构.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +103,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>几个小专题 | 依旋的个人博客</title>
+<title>MongoDB | 依旋的个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -252,11 +299,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-专题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/04/02/专题/" class="article-date">
-      <time datetime="2015-04-02T10:12:25.000Z" itemprop="datePublished">2015-04-02</time>
+      <a href="/2016/09/03/mongodb/" class="article-date">
+      <time datetime="2016-09-03T14:15:42.000Z" itemprop="datePublished">2016-09-03</time>
 </a>
 
 
@@ -271,7 +318,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      几个小专题
+      MongoDB
     </h1>
   
 
@@ -282,7 +329,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript学习笔记/">JavaScript学习笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodeJs学习笔记/">nodeJs学习笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -292,9 +339,80 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="阻止a标签跳转"><a href="#阻止a标签跳转" class="headerlink" title="阻止a标签跳转"></a>阻止a标签跳转</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="comment">&lt;!--点击后会跳到当前页面的头部--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#id"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="comment">&lt;!--会跳转到指定标签的位置--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"###"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="comment">&lt;!--在数据库中有的时候会被当作注释--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0)"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="半透明"><a href="#半透明" class="headerlink" title="半透明"></a>半透明</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: rgba(255, 0, 0, 0.5);/*透明度不继承*//*0-1 0全透明 1不透明*//*IE8不支持*/</div><div class="line">opacity: 0.5;/*透明度会继承*//*0-1 0全透明 1不透明*//*IE8不支持*/</div><div class="line">filter: alpha(opacity=20);/*0-100 0全透明 100不透明*//*只有IE678支持*/</div></pre></td></tr></table></figure>
-<h2 id="显示隐藏盒子"><a href="#显示隐藏盒子" class="headerlink" title="显示隐藏盒子"></a>显示隐藏盒子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//rgba</span></div><div class="line"><span class="comment">//opacity</span></div><div class="line"><span class="comment">//filter</span></div><div class="line"><span class="comment">//display</span></div><div class="line"><span class="comment">//visibility</span></div><div class="line"><span class="comment">//overflow也行</span></div><div class="line"><span class="comment">//h0</span></div><div class="line"><span class="comment">//w0</span></div><div class="line"><span class="comment">//w0h0</span></div><div class="line"><span class="comment">//定位 left</span></div><div class="line"><span class="comment">//定位 top</span></div><div class="line"><span class="comment">//m-很大</span></div><div class="line"><span class="comment">//m 很大</span></div><div class="line"><span class="comment">//定位 把他盖住</span></div><div class="line"><span class="comment">//浮动 把他盖住</span></div><div class="line"><span class="comment">//改变背景色 和后面的背景色一样</span></div><div class="line"><span class="comment">//从结构上把他干掉</span></div></pre></td></tr></table></figure>
+        <h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><h3 id="数据库概念"><a href="#数据库概念" class="headerlink" title="数据库概念"></a>数据库概念</h3><blockquote>
+<p>数据库：一个电子化的文件柜</p>
+</blockquote>
+<p>数据库就是为我们方便的管理数据的一个平台，例如对数据的存储、修改、查询等都非常的方便。</p>
+<h3 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h3><p>数据库产品有很多，以下是一些常见的数据库产品：</p>
+<ul>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>DB2</li>
+<li>SqlServer</li>
+<li>MongoDB</li>
+<li>etc.</li>
+</ul>
+<p>数据库没有排名之分，各有各的应用场景，我们这里学习的是 MongoDB 数据库。</p>
+<h3 id="MongoDB-数据库"><a href="#MongoDB-数据库" class="headerlink" title="MongoDB 数据库"></a>MongoDB 数据库</h3><blockquote>
+<p>为了更好的学习 MongoDB 数据库，大家可以参考菜鸟教程上的 MongoDB 数据库教程文档，<br>链接地址：<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="external">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
+</blockquote>
+<h3 id="MongoDB-数据库存储结构"><a href="#MongoDB-数据库存储结构" class="headerlink" title="MongoDB 数据库存储结构"></a>MongoDB 数据库存储结构</h3><p><img src="img/mongodb数据存储结构.png" alt="mongodb数据存储结构"></p>
+<h3 id="安装与配置-MongoDB-数据库环境"><a href="#安装与配置-MongoDB-数据库环境" class="headerlink" title="安装与配置 MongoDB 数据库环境"></a>安装与配置 MongoDB 数据库环境</h3><p>详情见视频：<code>11_安装MongoDB数据库环境</code></p>
+<h3 id="启动-MongoDB-服务实例"><a href="#启动-MongoDB-服务实例" class="headerlink" title="启动 MongoDB 服务实例"></a>启动 MongoDB 服务实例</h3><p>可以通过使用安装程序中的 <code>mongod</code> CLI应用程序来启动 MongoDB 服务。</p>
+<p>直接在控制台输入：<code>mongod</code> 敲回车即可。</p>
+<p>在启动的时候，可以通过 <code>--dbpath</code> 指定数据服务存储数据的目录，<br>如果不指定该目录，默认 <code>mongod</code> 会去 <code>c:/data/db</code> 作为自己的数据存储目录。</p>
+<p>64 位版本启动 MongoDB 数据服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath C:\data\db</div></pre></td></tr></table></figure>
+<p>32 位版本使用下面的命令启动数据服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath 数据存储路径 --journal --storageEngine=mmapv1</div></pre></td></tr></table></figure>
+<p>提示：如果不加 <code>--dbpath</code>, mongod 会自动使用 <code>C:\data\db</code> 目录作为自己的数据存储路径，<br>所以，如果你已经有了 <code>C:\data\db</code> 目录了，可以省略 <code>--dbpath</code>。</p>
+<p>执行完上面的命令并成功开启 MongoDB 数据服务实例之后，就把该控制台最小化到一边就可以了，<br>千万不要关闭，否则无法连接，如果对数据库的操作结束，可以打开该控制台通过 <code>Ctrl + C</code> 关闭。</p>
+<h3 id="连接-MongoDB-数据服务"><a href="#连接-MongoDB-数据服务" class="headerlink" title="连接 MongoDB 数据服务"></a>连接 MongoDB 数据服务</h3><p><strong>注意：在进行连接之前请确保你的服务实例是开启状态的（不要关闭刚才开启的数据服务实例）。</strong></p>
+<p>打开一个新的控制台，在控制台输入以下命令用来连接本机的 MongoDB 服务实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo</div></pre></td></tr></table></figure>
+<p>mongo 命令默认去连接本机上的 MongoDB 服务实例：<code>127.0.0.1:27017</code>，可以通过下面的命令<br>指定连接的主机名和端口号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo --host 127.0.0.1 --port 27017</div></pre></td></tr></table></figure>
+<p>如果看到类似于如下的字样说明连接成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">MongoDB shell version v3.4.0</div><div class="line">connecting to: mongodb://127.0.0.1:27017</div><div class="line">MongoDB server version: 3.4.0</div><div class="line">Server has startup warnings:</div><div class="line">2017-01-18T18:49:53.865+0800 I CONTROL  [initandlisten]</div><div class="line">2017-01-18T18:49:53.865+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017-01-18T18:49:53.866+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017-01-18T18:49:53.866+0800 I CONTROL  [initandlisten]</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>如果提示 “无法连接主机”，请检查你的 MongoDB 数据服务实例是否开启。</p>
+<h3 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h3><ul>
+<li><code>show dbs</code><ul>
+<li>查看当前服务实例上所有的数据库</li>
+</ul>
+</li>
+<li><code>use 数据库名称</code><ul>
+<li>这个命令表示切换到指定的数据库</li>
+<li>如果没有，也不会创建</li>
+<li>如果已经有了，则表示切换到这个数据库对该数据库进行操作</li>
+</ul>
+</li>
+<li><code>db</code><ul>
+<li>查看当前所处的数据库</li>
+</ul>
+</li>
+<li><code>db.集合名称.insert(数据文档)</code></li>
+<li><code>show collections</code><ul>
+<li>查看当前数据库中所有的集合</li>
+</ul>
+</li>
+<li><code>db.集合名称.find()</code><ul>
+<li>查询指定集合中所有的数据</li>
+<li>可以通过 <code>db.集合名称.find().pretty()</code> 美化输出格式</li>
+<li>默认是查询所有，可以通过：<code>db.集合名称.find({查询条件})</code> 按条件查询集合中的数据</li>
+</ul>
+</li>
+<li><code>db.集合名称.update({更新条件}, {要更新的字段})</code><ul>
+<li>更新指定集合数据</li>
+</ul>
+</li>
+<li><code>db.集合名称.remove({删除条件})</code><ul>
+<li>删除指定集合中的数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用-Node-操作-MongoDB"><a href="#使用-Node-操作-MongoDB" class="headerlink" title="使用 Node 操作 MongoDB"></a>使用 Node 操作 MongoDB</h2><p>安装 MongoDB 官方提供的驱动包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save mongodb</div></pre></td></tr></table></figure>
+<p>具体操作方式请参考官方文档：<a href="https://www.npmjs.com/package/mongodb" target="_blank" rel="external">https://www.npmjs.com/package/mongodb</a></p>
 
       
     </div>
@@ -303,13 +421,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/04/02/专题/">几个小专题</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/03/mongodb/">MongoDB</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">echo</a></p>
-        <p><span>发布时间:</span>2015-04-02, 18:12:25</p>
-        <p><span>最后更新:</span>2017-02-28, 21:00:19</p>
+        <p><span>发布时间:</span>2016-09-03, 22:15:42</p>
+        <p><span>最后更新:</span>2017-03-01, 20:55:09</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/04/02/专题/" title="几个小专题">http://yoursite.com/2015/04/02/专题/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2015/04/02/专题/　　作者: echo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/03/mongodb/" title="MongoDB">http://yoursite.com/2016/09/03/mongodb/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/03/mongodb/　　作者: echo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -322,15 +440,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/04/10/jQuery基础/">
-                    jQuery学习笔记
+                <a href="/2016/09/07/包管理工具svn和git/">
+                    版本控制工具
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/03/26/CSS3/">
-                    CSS3学习笔记
+                <a href="/2016/09/01/express框架/">
+                    express
                 </a>
             </div>
         
@@ -342,7 +460,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止a标签跳转"><span class="toc-number">1.</span> <span class="toc-text">阻止a标签跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#半透明"><span class="toc-number">2.</span> <span class="toc-text">半透明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示隐藏盒子"><span class="toc-number">3.</span> <span class="toc-text">显示隐藏盒子</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MongoDB"><span class="toc-number">1.</span> <span class="toc-text">MongoDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库概念"><span class="toc-number">1.1.</span> <span class="toc-text">数据库概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库分类"><span class="toc-number">1.2.</span> <span class="toc-text">数据库分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB-数据库"><span class="toc-number">1.3.</span> <span class="toc-text">MongoDB 数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB-数据库存储结构"><span class="toc-number">1.4.</span> <span class="toc-text">MongoDB 数据库存储结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装与配置-MongoDB-数据库环境"><span class="toc-number">1.5.</span> <span class="toc-text">安装与配置 MongoDB 数据库环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-MongoDB-服务实例"><span class="toc-number">1.6.</span> <span class="toc-text">启动 MongoDB 服务实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接-MongoDB-数据服务"><span class="toc-number">1.7.</span> <span class="toc-text">连接 MongoDB 数据服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本操作命令"><span class="toc-number">1.8.</span> <span class="toc-text">基本操作命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-Node-操作-MongoDB"><span class="toc-number">2.</span> <span class="toc-text">使用 Node 操作 MongoDB</span></a></li></ol>
         
     </div>
     <style>
@@ -378,7 +496,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"几个小专题　| 依旋的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"MongoDB　| 依旋的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -398,7 +516,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/04/10/jQuery基础/" title="上一篇: jQuery学习笔记">
+            <a href="/2016/09/07/包管理工具svn和git/" title="上一篇: 版本控制工具">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -406,7 +524,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/03/26/CSS3/" title="下一篇: CSS3学习笔记">
+            <a href="/2016/09/01/express框架/" title="下一篇: express">
                 <i class="fa fa-angle-right"></i>
             </a>
         

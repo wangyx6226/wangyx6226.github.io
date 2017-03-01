@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="echo" />
+
+
+
+<meta name="description" content="1. Node.js 介绍1.1 网站开发模型（BS）
+Server
+为客户端提交接口：数据
+Java、.Net、Ruby、Python、PHP、Go、Swift、Lua
+学 Node 本质不是在学 Node，在学 服务器（Web后台）编程
+请求
+处理
+
+
+响应
+大前端时代：JavaScript 语言也可以运行在服务器端
+使用 JavaScript 这门语言也可以进行服务器编程
+JavaScrip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node基础">
+<meta property="og:url" content="http://yoursite.com/2016/08/26/node基础/index.html">
+<meta property="og:site_name" content="依旋的个人博客">
+<meta property="og:description" content="1. Node.js 介绍1.1 网站开发模型（BS）
+Server
+为客户端提交接口：数据
+Java、.Net、Ruby、Python、PHP、Go、Swift、Lua
+学 Node 本质不是在学 Node，在学 服务器（Web后台）编程
+请求
+处理
+
+
+响应
+大前端时代：JavaScript 语言也可以运行在服务器端
+使用 JavaScript 这门语言也可以进行服务器编程
+JavaScrip">
+<meta property="og:updated_time" content="2017-03-01T12:48:50.173Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node基础">
+<meta name="twitter:description" content="1. Node.js 介绍1.1 网站开发模型（BS）
+Server
+为客户端提交接口：数据
+Java、.Net、Ruby、Python、PHP、Go、Swift、Lua
+学 Node 本质不是在学 Node，在学 服务器（Web后台）编程
+请求
+处理
+
+
+响应
+大前端时代：JavaScript 语言也可以运行在服务器端
+使用 JavaScript 这门语言也可以进行服务器编程
+JavaScrip">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="依旋的个人博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>node基础 | 依旋的个人博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">echo</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/u/5541165310" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="/wangyx6226.github.io" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript学习笔记/">JavaScript学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodeJs学习笔记/">nodeJs学习笔记</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.lowkey.win">myLover</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">活泼开朗的东北小女生，自带逗比属性，热爱动漫，专注前端500年。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">echo</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">echo</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/u/5541165310" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="/wangyx6226.github.io" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-node基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/26/node基础/" class="article-date">
+      <time datetime="2016-08-26T13:18:22.000Z" itemprop="datePublished">2016-08-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node基础
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodeJs学习笔记/">nodeJs学习笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="1-Node-js-介绍"><a href="#1-Node-js-介绍" class="headerlink" title="1. Node.js 介绍"></a>1. Node.js 介绍</h2><h3 id="1-1-网站开发模型（BS）"><a href="#1-1-网站开发模型（BS）" class="headerlink" title="1.1 网站开发模型（BS）"></a>1.1 网站开发模型（BS）</h3><ul>
+<li>Server<ul>
+<li>为客户端提交接口：数据</li>
+<li>Java、.Net、Ruby、Python、PHP、Go、Swift、Lua</li>
+<li>学 Node 本质不是在学 Node，在学 服务器（Web后台）编程</li>
+<li>请求<ul>
+<li>处理</li>
+</ul>
+</li>
+<li>响应</li>
+<li>大前端时代：JavaScript 语言也可以运行在服务器端</li>
+<li>使用 JavaScript 这门语言也可以进行服务器编程</li>
+<li>JavaScript 通过 Node.js 运行在服务器端</li>
+</ul>
+</li>
+<li>Browser<ul>
+<li>客户端：把一坨用户看不懂的数据变成友好的形式给用户体验</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-什么是-Node-js？"><a href="#1-2-什么是-Node-js？" class="headerlink" title="1.2 什么是 Node.js？"></a>1.2 什么是 Node.js？</h3><blockquote>
+<p>简单的说 Node.js 就是运行在服务端的 JavaScript<br>Node开发就是利用 Ecmascript + 第三方开源库 + Node平台环境API进行编程</p>
+</blockquote>
+<ul>
+<li><p>什么是 JavaScript</p>
+<ul>
+<li>JavaScript 一个运行在浏览器端的脚本原因</li>
+<li>运行时：浏览器</li>
+<li>Ecmascript：JavaScript 基本语法：var、if-else、for、Array、Object、String、function</li>
+<li>BOM<ul>
+<li>Window</li>
+<li>DOM</li>
+</ul>
+</li>
+<li>渲染引擎</li>
+<li>JavaScript 解析执行引擎<ul>
+<li>在所有浏览器中，Google Chrome 的 V8 引擎是最快的 JS 脚本代码解析执行引擎</li>
+</ul>
+</li>
+<li>通过 V8 引擎解析和执行 JavaScript 代码</li>
+</ul>
+</li>
+<li><p>Node 官网：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
+</li>
+<li><p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. </p>
+<ul>
+<li>Node.js 是一个构建与 Chrome V8 引擎之上的一个 JavaScript 运行时（执行环境）</li>
+<li>Node 使用 JavaScript 进行编程</li>
+<li>Node 采用了 Chrome 的 V8 引擎解析和执行 JavaScript 脚本代码</li>
+<li>Node 不是一种语言，Node 可以用来解析和执行 JavaScript 代码</li>
+<li>在 Node 没有 DOM、BOM 了，也不用去关心样式、结构问题了</li>
+<li>Node 在基本的 JavaScript 语言之上，或者在 Node 平台给 Ecmascript 提供了大量的底层编程接口<ul>
+<li>例如文件IO</li>
+<li>例如网络IO</li>
+<li>处理数据</li>
+<li>操作数据库</li>
+<li>构建网络服务</li>
+<li>。。。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. <ul>
+<li>event-driven：事件驱动<ul>
+<li>在 Node 中，也采用了类似于浏览器端的编程思想，事件模型编程思想</li>
+</ul>
+</li>
+<li>non-blocking I/O model：非阻塞IO模型<ul>
+<li>Node 中大量的通过类似于浏览器中 ajax 的方式进行编程</li>
+<li>绝大多数代码都是异步编程模型</li>
+</ul>
+</li>
+<li>lightweight &amp; efficient：轻量和高效</li>
+</ul>
+</li>
+<li>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.<ul>
+<li>Node.js 包生态系统 Npm 是世界上最大的开源库生态系统</li>
+<li>largest ecosystem：最大的开源库生态系统</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-使用-Node-可以做什么？"><a href="#1-3-使用-Node-可以做什么？" class="headerlink" title="1.3 使用 Node 可以做什么？"></a>1.3 使用 Node 可以做什么？</h3><ul>
+<li>开发网站服务器</li>
+<li>游戏服务器</li>
+<li>开发命令行工具<ul>
+<li>软件分为两种：</li>
+<li>GUI：看得见，鼠标点点点</li>
+<li>CLI：命令窗口，各种命令，选项参数等</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-Node-发展史"><a href="#1-4-Node-发展史" class="headerlink" title="1.4 Node 发展史"></a>1.4 Node 发展史</h3><ul>
+<li>Node.js 由 Ryan Dahl 和一些其他的开发者于2009年在 Joyent 工作时发明</li>
+<li>Node 作者当初只是想做一个类似于 Apache 的服务器而已，最初的时候起的名字叫：webjs</li>
+<li>2009年2月，Ryan Dahl在博客上宣布准备基于V8创建一个轻量级的Web服务器并提供一套库。</li>
+<li>2009年5月，Ryan Dahl在GitHub上发布了最初版本的部分Node.js包，随后几个月里，有人开始使用Node.js开发应用。</li>
+<li>2009年11月和2010年4月，两届JSConf大会都安排了Node.js的讲座。</li>
+<li>2010年年底，Node.js获得云计算服务商Joyent资助，创始人Ryan Dahl加入Joyent全职负责Node.js的发展。</li>
+<li>2011年7月，Node.js在微软的支持下发布Windows版本。[2] </li>
+</ul>
+<h3 id="1-5-学习资源推荐"><a href="#1-5-学习资源推荐" class="headerlink" title="1.5 学习资源推荐"></a>1.5 学习资源推荐</h3><ul>
+<li>国内NodeJS开发者社区：<a href="https://cnodejs.org/" target="_blank" rel="external">https://cnodejs.org/</a></li>
+<li>《深入浅出Node.js》：作者：阿里巴巴.朴灵</li>
+</ul>
+<hr>
+<h2 id="2-快速上手"><a href="#2-快速上手" class="headerlink" title="2. 快速上手"></a>2. 快速上手</h2><h3 id="2-1-环境安装"><a href="#2-1-环境安装" class="headerlink" title="2.1 环境安装"></a>2.1 环境安装</h3><ul>
+<li><a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a></li>
+</ul>
+<h3 id="2-2-Hello-World"><a href="#2-2-Hello-World" class="headerlink" title="2.2 Hello World"></a>2.2 Hello World</h3><ul>
+<li>当你在控制台输入：<code>node 01-hello-world.js</code> 之后</li>
+<li>实际上通过你安装目录下的那个 <code>node.exe</code> 可执行程序读取了 <code>01-hello-world.js</code> 文件中的源代码</li>
+<li>然后解析和执行文件中的代码</li>
+<li>最后将结果打印输出到了控制台中</li>
+</ul>
+<h3 id="2-3-path-环境变量"><a href="#2-3-path-环境变量" class="headerlink" title="2.3 path 环境变量"></a>2.3 path 环境变量</h3><ul>
+<li>目的：就是为了在终端的任意目录中都可以找到该可执行文件</li>
+<li>配置方式：<ul>
+<li>一种在 path 中写路径，通过英文分号分隔</li>
+<li>一种先定义变量，给一个变量值，然后在 path 中通过英文分号进行分隔，使用 <code>%变量名%</code> 引用该变量</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-文件操作"><a href="#2-4-文件操作" class="headerlink" title="2.4 文件操作"></a>2.4 文件操作</h3><h3 id="2-5-HTTP-服务"><a href="#2-5-HTTP-服务" class="headerlink" title="2.5 HTTP 服务"></a>2.5 HTTP 服务</h3><h3 id="2-6-文件版留言本"><a href="#2-6-文件版留言本" class="headerlink" title="2.6 文件版留言本"></a>2.6 文件版留言本</h3><hr>
+<h2 id="3-Node-基础"><a href="#3-Node-基础" class="headerlink" title="3. Node 基础"></a>3. Node 基础</h2><h3 id="3-1-Node-中的-JavaScript"><a href="#3-1-Node-中的-JavaScript" class="headerlink" title="3.1 Node 中的 JavaScript"></a>3.1 Node 中的 JavaScript</h3><ul>
+<li><em>console</em></li>
+<li><em>setInterval(callback, delay[, …args])</em></li>
+<li><em>setTimeout(callback, delay[, …args])</em></li>
+<li><em>clearInterval(intervalObject)</em></li>
+<li><em>clearTimeout(timeoutObject)</em></li>
+<li>clearImmediate(immediateObject)</li>
+<li>setImmediate(callback[, …args])</li>
+<li>__dirname</li>
+<li>__filename</li>
+<li>module</li>
+<li>exports</li>
+<li>global</li>
+<li>process</li>
+<li>require()</li>
+</ul>
+<h3 id="3-2-模块化"><a href="#3-2-模块化" class="headerlink" title="3.2 模块化"></a>3.2 模块化</h3><h3 id="3-3-自定义模块（用户自己编写的模块）"><a href="#3-3-自定义模块（用户自己编写的模块）" class="headerlink" title="3.3 自定义模块（用户自己编写的模块）"></a>3.3 自定义模块（用户自己编写的模块）</h3><ul>
+<li>require</li>
+<li>module.exports</li>
+<li>exports</li>
+</ul>
+<h3 id="3-4-核心模块（Node-提供）"><a href="#3-4-核心模块（Node-提供）" class="headerlink" title="3.4 核心模块（Node 提供）"></a>3.4 核心模块（Node 提供）</h3><blockquote>
+<p>在线文档地址：<a href="https://nodejs.org/dist/latest-v6.x/docs/api/" target="_blank" rel="external">https://nodejs.org/dist/latest-v6.x/docs/api/</a></p>
+</blockquote>
+<p>以下是常用的核心模块及作用：</p>
+<table>
+<thead>
+<tr>
+<th>核心模块名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fs</td>
+<td>文件操作</td>
+</tr>
+<tr>
+<td>http</td>
+<td>网络操作</td>
+</tr>
+<tr>
+<td>net</td>
+<td>更底层的网络操作</td>
+</tr>
+<tr>
+<td>os</td>
+<td>操作系统相关</td>
+</tr>
+<tr>
+<td>path</td>
+<td>文件路径操作</td>
+</tr>
+<tr>
+<td>querystring</td>
+<td>查询字符串处理</td>
+</tr>
+<tr>
+<td>url</td>
+<td>url操作处理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-第三方模块（也称作包）"><a href="#3-5-第三方模块（也称作包）" class="headerlink" title="3.5 第三方模块（也称作包）"></a>3.5 第三方模块（也称作包）</h3><h2 id="4-npm"><a href="#4-npm" class="headerlink" title="4. npm"></a>4. npm</h2><h3 id="4-1-两层含义"><a href="#4-1-两层含义" class="headerlink" title="4.1 两层含义"></a>4.1 两层含义</h3><ul>
+<li>npm 是一个网站，这个网站上托管了几十万个使用 JavaScript 开发的功能模块库</li>
+<li>npm 是一个基于Node开发的一个终端命令行包管理工具<ul>
+<li>可以使用这个工具去 npm 网站上下载对应的库</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-npm-安装"><a href="#4-2-npm-安装" class="headerlink" title="4.2 npm 安装"></a>4.2 npm 安装</h3><p>只要安装了 node 就有了 npm。</p>
+<p>通过 <code>npm -v</code> 测试是否有 npm 工具。</p>
+<h3 id="4-3-使用-npm-安装包"><a href="#4-3-使用-npm-安装包" class="headerlink" title="4.3 使用 npm 安装包"></a>4.3 使用 npm 安装包</h3><ol>
+<li>找到能解决自己问题的包，看文档使用说明</li>
+<li>通过 <code>npm install 包名</code> 下载到当前项目中的根目录</li>
+<li>在代码中通过 <code>require(&#39;第三方包名&#39;)</code> 使用你下载的包</li>
+</ol>
+<p>通过 <code>npm install 包名</code> 安装的包会自动下载到当前目录下的 <code>node_modules</code> 目录，<br>如果该目录不存在，则直接创建，如果已存在，则直接将文件下载进去。</p>
+<h3 id="4-4-使用-Npm-安装全局命令行工具"><a href="#4-4-使用-Npm-安装全局命令行工具" class="headerlink" title="4.4  使用 Npm 安装全局命令行工具"></a>4.4  使用 Npm 安装全局命令行工具</h3><p>在 npm 社区中，除了有可以在项目中使用的第三方包之外，还有一些特殊的包：<br>这些特殊的包被称之为命令行工具，不是用于项目的，而是可以安装到计算机中，<br>然后通过命令行中的命令的形式来使用，这种工具有很多，例如：<code>http-server</code>、<code>gulp</code>、<br><code>browser-sync</code>、<code>nodemon</code> 等等等等很多。</p>
+<p>安装方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --global 第三方命令行工具名字</div></pre></td></tr></table></figure>
+<p>卸载：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall --global 第三方命令行工具名称</div></pre></td></tr></table></figure>
+<p>查看全局命令行安装目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm root --global</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-Node-中的模块化"><a href="#5-Node-中的模块化" class="headerlink" title="5. Node 中的模块化"></a>5. Node 中的模块化</h2><h3 id="5-1-模块通信交互规则"><a href="#5-1-模块通信交互规则" class="headerlink" title="5.1 模块通信交互规则"></a>5.1 模块通信交互规则</h3><ul>
+<li>一个 JavaScript 文件就是一个模块</li>
+<li>模块天生就是一个私有的作用域，默认模块内定义的变量等成员只能被模块内部访问</li>
+<li>每一个模块中都有一个 <code>module.exports</code> 编程接口对象，默认是一个空对象<ul>
+<li>可以通过给 <code>module.exports</code> 编程接口对象添加成员向外暴露内部成员</li>
+<li>例如：<code>var foo = &#39;bar&#39; module.exports.foo = foo</code></li>
+<li>上面示例标识当前模块向外部暴露了一个接口对象，内部有一个 foo 成员，值是 bar</li>
+</ul>
+</li>
+<li><code>require</code> 方法可以用来加载模块，该方法是同步加载执行的，主要做两件事儿<ul>
+<li><ol>
+<li>执行被加载模块中所有的代码</li>
+</ol>
+</li>
+<li><ol>
+<li>拿到被加载模块中的 <code>module.exports</code> 接口对象</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-用户自定义模块"><a href="#5-2-用户自定义模块" class="headerlink" title="5.2 用户自定义模块"></a>5.2 用户自定义模块</h3><h3 id="5-3-核心模块"><a href="#5-3-核心模块" class="headerlink" title="5.3 核心模块"></a>5.3 核心模块</h3><p>核心模块就是 Node 提供的模块，例如 <code>fs</code>、<code>http</code>、<code>path</code>。。。，<br>这些模块其实也是文件模块，核心模块一般都是通过一个固定的标识名称进行加载的，<br>也就是说不能写错，固定的。用什么就加载什么，无论是程序执行效率还是可维护性都非常好。</p>
+<h3 id="5-4-第三方模块"><a href="#5-4-第三方模块" class="headerlink" title="5.4 第三方模块"></a>5.4 第三方模块</h3><p>也就是npm社区提供的第三方包，用的时候，先下载，然后也是通过 <code>require</code> 进行加载，<br>加载第三方模块的时候，就是通过 <code>require(&#39;第三方模块标识名&#39;)</code>，所以第三方模块不可能有和<br>核心模块重名的名称。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/26/node基础/">node基础</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">echo</a></p>
+        <p><span>发布时间:</span>2016-08-26, 21:18:22</p>
+        <p><span>最后更新:</span>2017-03-01, 20:48:50</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/26/node基础/" title="node基础">http://yoursite.com/2016/08/26/node基础/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/08/26/node基础/　　作者: echo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/09/01/express框架/">
+                    express
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/06/02/代码块及思路整理/">
+                    代码块及思路整理
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Node-js-介绍"><span class="toc-number">1.</span> <span class="toc-text">1. Node.js 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-网站开发模型（BS）"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 网站开发模型（BS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-什么是-Node-js？"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 什么是 Node.js？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-使用-Node-可以做什么？"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 使用 Node 可以做什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Node-发展史"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Node 发展史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-学习资源推荐"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 学习资源推荐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-快速上手"><span class="toc-number">2.</span> <span class="toc-text">2. 快速上手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-环境安装"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 环境安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Hello-World"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Hello World</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-path-环境变量"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 path 环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-文件操作"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-HTTP-服务"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 HTTP 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-文件版留言本"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 文件版留言本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Node-基础"><span class="toc-number">3.</span> <span class="toc-text">3. Node 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Node-中的-JavaScript"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Node 中的 JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-模块化"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 模块化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-自定义模块（用户自己编写的模块）"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 自定义模块（用户自己编写的模块）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-核心模块（Node-提供）"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 核心模块（Node 提供）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-第三方模块（也称作包）"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 第三方模块（也称作包）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-npm"><span class="toc-number">4.</span> <span class="toc-text">4. npm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-两层含义"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 两层含义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-npm-安装"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 npm 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-使用-npm-安装包"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 使用 npm 安装包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-使用-Npm-安装全局命令行工具"><span class="toc-number">4.4.</span> <span class="toc-text">4.4  使用 Npm 安装全局命令行工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Node-中的模块化"><span class="toc-number">5.</span> <span class="toc-text">5. Node 中的模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-模块通信交互规则"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 模块通信交互规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-用户自定义模块"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 用户自定义模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-核心模块"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 核心模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-第三方模块"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 第三方模块</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"node基础　| 依旋的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/09/01/express框架/" title="上一篇: express">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/06/02/代码块及思路整理/" title="下一篇: 代码块及思路整理">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/07/包管理工具svn和git/">版本控制工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/03/mongodb/">MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/01/express框架/">express</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/node基础/">node基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/02/代码块及思路整理/">代码块及思路整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/05/零碎知识点/">前端学习中的零碎知识点</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/10/jQuery基础/">jQuery学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/02/专题/">几个小专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/26/CSS3/">CSS3学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/17/HTML5/">THML5基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/09/BOM/">BOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/27/js高级/">js高级</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/25/无缝轮播图/">无缝轮播图</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/21/DOM笔记/">DOM笔记</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2017 echo
+            </div>
+<!--            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+-->
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

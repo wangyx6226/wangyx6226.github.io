@@ -15,49 +15,43 @@
 
 
 
-<meta name="description" content="BOM浏览器对象模型
-window对象
-window对象是JavaScript中的顶级对象
-所有定义在全局作用域中的变量、函数都会变成window对象的属性和方法
-window对象下的属性和方法调用的时候可以省略window
-onload();//窗体加载完成事件（窗体加载完成才执行）
-window.open(url,target,param);
+<meta name="description" content="package.json 文件package.json 文件一般用来描述项目的一些基本信息，例如入口文件、依赖项、项目介绍、开发作者等数据。
+目前已知的两个非常重要的属性：
+
+main
+main 和模块化中的第三方包加载规则有关系
 
 
-
-url 要打开的地址；
-target新窗口的">
+dependencies
+dependencies 和 npm 命令行工具有关系
+当你安装包的时候，如果加上 --save 参数，则npm会自动把这个第三方包依赖信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BOM">
-<meta property="og:url" content="http://yoursite.com/2015/03/09/BOM/index.html">
+<meta property="og:title" content="express">
+<meta property="og:url" content="http://yoursite.com/2016/09/01/express框架/index.html">
 <meta property="og:site_name" content="依旋的个人博客">
-<meta property="og:description" content="BOM浏览器对象模型
-window对象
-window对象是JavaScript中的顶级对象
-所有定义在全局作用域中的变量、函数都会变成window对象的属性和方法
-window对象下的属性和方法调用的时候可以省略window
-onload();//窗体加载完成事件（窗体加载完成才执行）
-window.open(url,target,param);
+<meta property="og:description" content="package.json 文件package.json 文件一般用来描述项目的一些基本信息，例如入口文件、依赖项、项目介绍、开发作者等数据。
+目前已知的两个非常重要的属性：
+
+main
+main 和模块化中的第三方包加载规则有关系
 
 
-
-url 要打开的地址；
-target新窗口的">
-<meta property="og:updated_time" content="2017-02-28T12:51:08.820Z">
+dependencies
+dependencies 和 npm 命令行工具有关系
+当你安装包的时候，如果加上 --save 参数，则npm会自动把这个第三方包依赖信">
+<meta property="og:updated_time" content="2017-03-01T12:53:14.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BOM">
-<meta name="twitter:description" content="BOM浏览器对象模型
-window对象
-window对象是JavaScript中的顶级对象
-所有定义在全局作用域中的变量、函数都会变成window对象的属性和方法
-window对象下的属性和方法调用的时候可以省略window
-onload();//窗体加载完成事件（窗体加载完成才执行）
-window.open(url,target,param);
+<meta name="twitter:title" content="express">
+<meta name="twitter:description" content="package.json 文件package.json 文件一般用来描述项目的一些基本信息，例如入口文件、依赖项、项目介绍、开发作者等数据。
+目前已知的两个非常重要的属性：
+
+main
+main 和模块化中的第三方包加载规则有关系
 
 
-
-url 要打开的地址；
-target新窗口的">
+dependencies
+dependencies 和 npm 命令行工具有关系
+当你安装包的时候，如果加上 --save 参数，则npm会自动把这个第三方包依赖信">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -89,7 +83,7 @@ target新窗口的">
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>BOM | 依旋的个人博客</title>
+<title>express | 依旋的个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -285,11 +279,11 @@ target新窗口的">
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-BOM" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-express框架" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/09/BOM/" class="article-date">
-      <time datetime="2015-03-09T11:10:35.000Z" itemprop="datePublished">2015-03-09</time>
+      <a href="/2016/09/01/express框架/" class="article-date">
+      <time datetime="2016-09-01T10:13:42.000Z" itemprop="datePublished">2016-09-01</time>
 </a>
 
 
@@ -304,7 +298,7 @@ target新窗口的">
         
   
     <h1 class="article-title" itemprop="name">
-      BOM
+      express
     </h1>
   
 
@@ -315,7 +309,7 @@ target新窗口的">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript学习笔记/">JavaScript学习笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodeJs学习笔记/">nodeJs学习笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -325,142 +319,80 @@ target新窗口的">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><pre><code>浏览器对象模型
-</code></pre><h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><ol>
-<li>window对象是JavaScript中的顶级对象</li>
-<li>所有定义在全局作用域中的变量、函数都会变成window对象的属性和方法</li>
-<li><p>window对象下的属性和方法调用的时候可以省略window</p>
-<p><code>onload()</code>;//窗体加载完成事件（窗体加载完成才执行）</p>
-<p><code>window.open(url,target,param);</code></p>
-</li>
-</ol>
+        <h2 id="package-json-文件"><a href="#package-json-文件" class="headerlink" title="package.json 文件"></a>package.json 文件</h2><p>package.json 文件一般用来描述项目的一些基本信息，例如入口文件、依赖项、项目介绍、开发作者等数据。</p>
+<p>目前已知的两个非常重要的属性：</p>
 <ul>
-<li>url 要打开的地址；</li>
-<li>target新窗口的位置；_blank  _self  _parent(父框架)</li>
-<li>param 新窗口的一些设置；</li>
-<li><p>返回值，新窗口的句柄,返回一个窗体对象，可供close()调用；</p>
-<p><code>window.close();</code>  关闭窗口,谁调用就关闭谁</p>
-</li>
-</ul>
-<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><ul>
-<li><p>定时执行</p>
-<p><code>var  timerId  =  setInterval(function(){},delay);</code></p>
-<p><code>clearInterval(timerId);</code><br>//间隔时间执行，不是特别精确</p>
-</li>
-<li><p>延迟执行</p>
-<p><code>var  timerId  =  setTimeout(function(){},delay);</code></p>
-<p>//设置定时器 setTimeout 参数 1回调函数 2延迟时间（单位是毫秒）</p>
-<p>返回值 数字，即定时器的编号</p>
-<p><code>clearTimeout(timerId);</code><br>//清除定时器 参数是数字，即要清除的定时器</p>
-</li>
-</ul>
-<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><ul>
-<li><p>window.location<br>– location相当于浏览器地址栏<br>– 可以将url解析成独立的片段</p>
-</li>
-<li><p>location对象的属性<br>– href<br>– <code>location.reload();</code> //重新加载</p>
-</li>
-</ul>
-<h3 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h3><h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3><h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><ul>
-<li>历史记录管理</li>
-<li>后退<ul>
-<li><code>history.back();</code></li>
-<li><code>history.go(-1)</code></li>
+<li>main<ul>
+<li>main 和模块化中的第三方包加载规则有关系</li>
 </ul>
 </li>
-<li>前进<ul>
-<li><code>history.forward();</code></li>
-<li><code>history.go(1);</code></li>
+<li>dependencies<ul>
+<li>dependencies 和 npm 命令行工具有关系</li>
+<li>当你安装包的时候，如果加上 <code>--save</code> 参数，则npm会自动把这个第三方包依赖信息写入到 <code>package.json</code> 文件中的 <code>dependencies</code> 字段中</li>
+<li>当你执行 <code>npm install</code> 的时候，npm 会找到当前项目中的 <code>package.json</code> 文件中的 <code>dependencies</code> 依赖项，然后依次将所有的依赖下载下来</li>
 </ul>
 </li>
 </ul>
-<h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2><ul>
-<li><code>var date = new Date();</code> //创建日期对象</li>
-<li><code>date.valueOf();</code> //从1970-1-1 00:00:00:000 到现在的毫秒数</li>
-<li><code>var date2 = Date.now();</code> //直接返回的就是当前时间的毫秒值,IE9+才支持</li>
-<li><code>var date3 = +new Date();</code> // 不支持now的方法</li>
-<li>日期格式化：<ul>
-<li><code>var date = new Date();</code></li>
-<li><code>console.log(date.toDateString());//Sun Nov 06 2016</code></li>
-<li><code>console.log(date.toTimeString());//20:19:19 GMT+0800 (中国标准时间)</code></li>
-<li><code>console.log(date.toLocaleDateString());//2016/11/6</code></li>
-<li><code>console.log(date.toLocaleTimeString());//下午8:19:19</code></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">date.getYear();<span class="comment">//返回年</span></div><div class="line">date.getMouth();<span class="comment">//返回月份，0-11</span></div><div class="line">date.getDate();<span class="comment">//返回当天是当月的第几天</span></div><div class="line">date.getDay();<span class="comment">//返回星期几， 0-6</span></div><div class="line">date.getHours();<span class="comment">//返回当前时间的小时</span></div><div class="line">date.getMinutes();<span class="comment">//返回当前时间的分钟</span></div><div class="line">date.getSeconds();<span class="comment">//返回当前时间的秒数</span></div><div class="line">date.getMilliseconds();<span class="comment">//返回当前时间的毫秒数</span></div></pre></td></tr></table></figure>
-<p>日期转换：</p>
-<h2 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h2><ul>
-<li><p>三个特殊的引用类型：String/Number/Boolean</p>
-<p>例：</p>
-<p><code>var  s1  =  &quot;zhangsan&quot;;</code></p>
-<p><code>var  s2  =  s1.substring(5);</code></p>
-<p>s1是基本类型，基本类型是没有方法的</p>
-<p>当调用s1.substring(5)的时候，先把s1包装成String类型的临时对象，再调用substring方法，最后销毁临时对象</p>
-</li>
-</ul>
-<p>相当于：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  s1  =  <span class="keyword">new</span>  <span class="built_in">String</span>(<span class="string">"zhangsan"</span>);</div><div class="line"><span class="keyword">var</span>  s2  =  s1.substring(<span class="number">5</span>);</div><div class="line">s1  =  <span class="literal">null</span>;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>注意：Number和Boolean基本不用，而且会引起歧义</p>
+<p>这个文件最好每一个项目都有，保存一些项目的基本信息。</p>
+<p>这个文件可以通过 <code>npm init</code> 以向导的形式生成，也可以加上 <code>-y</code> 参数，一步生成。</p>
+<h2 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h2><blockquote>
+<p>一个基于 Node 开发的一个快速 Web 开发框架<br>主要用来构建 Server</p>
 </blockquote>
-<p>创建基本包装类型的对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  num  =  <span class="number">18</span>;  <span class="comment">//数值，基本类型</span></div><div class="line"><span class="keyword">var</span>  num  =  <span class="built_in">Number</span>(<span class="string">"18"</span>);  <span class="comment">//类型转换，基本类型</span></div><div class="line"><span class="keyword">var</span>  num  =  <span class="keyword">new</span>  <span class="built_in">Number</span>(<span class="number">18</span>);  <span class="comment">//基本包装类型，对象</span></div><div class="line"><span class="comment">//**new会改变this的指向，并返回**</span></div></pre></td></tr></table></figure></p>
-<h3 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h3><ul>
-<li>String类型是字符串的包装类型，提供给我们很多操作字符串的方法<br><code>var  strObj  =  new  String(&quot;hello  world&quot;);</code></li>
-<li>对象有方法和属性<ul>
-<li>属性：<br>length返回当前字符串总共多少字符</li>
-<li>方法：<br>注意：字符串中所有的方法都不会改变字符串本身，操作完成后会返回一个新的字符串。<ol>
-<li>字符方法<ul>
-<li><code>charAt();</code>    //获取指定位置处字符</li>
-<li><code>charCodeAt();</code>  //获取指定位置处字符的ASCII码</li>
-<li><code>str[0];</code>   //ES5，IE8+支持 和charAt()等效</li>
+<ul>
+<li><a href="http://expressjs.com/" target="_blank" rel="external">http://expressjs.com/</a></li>
+<li><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">http://www.expressjs.com.cn/</a></li>
+</ul>
+<h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello-world"></a>hello-world</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 1. 调用 express 方法，得到一个类似于 server 的实例</span></div><div class="line"><span class="comment">//    一般称作 app</span></div><div class="line"><span class="keyword">var</span> app = express()</div><div class="line"></div><div class="line"><span class="comment">// 2. 通过 app 根据不同的请求方法及请求路径设定具体的处理函数</span></div><div class="line"></div><div class="line"><span class="comment">// 当用户以 GET 请求 / 的时候，执行对应的回调处理函数</span></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">  res.end(<span class="string">'hello world'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 当用户以 GET 请求 /login 的时候，执行对应的回调处理函数</span></div><div class="line">app.get(<span class="string">'/login'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">  res.end(<span class="string">'hello login'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 3. 启动监听</span></div><div class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'服务器已启动，请访问：http://127.0.0.1:3000/'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="处理静态资源"><a href="#处理静态资源" class="headerlink" title="处理静态资源"></a>处理静态资源</h3><blockquote>
+<p>参考文档：<a href="http://www.expressjs.com.cn/starter/static-files.html" target="_blank" rel="external">http://www.expressjs.com.cn/starter/static-files.html</a></p>
+</blockquote>
+<p>通过 Express 内置的 <code>express.static</code> 可以方便地托管静态文件，<br>例如图片、CSS、JavaScript 文件等。</p>
+<p>配置规则如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="string">'路径访问前缀'</span>, express.static(<span class="string">'资源目录路径'</span>))</div></pre></td></tr></table></figure>
+<p>以下是一些配置示例：</p>
+<ul>
+<li>将目录 static 资源暴露出来，可以通过 <code>/static/*</code> 的形式进行访问<ul>
+<li><code>app.use(&#39;/static/&#39;, express.static(&#39;static目录的绝对路径&#39;))</code></li>
+<li><code>/static/css/a.css</code></li>
+<li><code>/static/css/b.css</code></li>
+<li><code>/static/img/ab2.jpg</code></li>
 </ul>
 </li>
-<li>操作方法<ul>
-<li><code>concat();</code>   //拼接字符串，和+一样</li>
-<li><code>slice();</code>     //从start位置开始，截取到end位置，end取不到</li>
-<li><code>substring();</code>  //从start位置开始，截取到end位置，end取不到</li>
-<li><code>substr();</code>    //从start位置开始，截取length个字符</li>
+<li>将目录 public 资源暴露出来，不需要任何前缀就可以访问<ul>
+<li><code>app.use(express.static(&#39;public 目录的绝对路径&#39;))</code></li>
+<li><code>/css/bb.css</code></li>
+<li><code>/img/a.jpg</code></li>
 </ul>
 </li>
-<li>位置方法<ul>
-<li><code>indexOf();</code>   //返回指定内容在元字符串中的位置。如果没有，则返回-1；</li>
-<li><code>lastIndexOf();</code>  //从后往前找，只找第一个匹配的。没有则返回-1；</li>
+<li>将目录 demo 资源暴露出来，可以通过 <code>/aa/*</code> /aa前缀的形式进行访问<ul>
+<li><code>app.use(&#39;/aa/&#39;, express.static(&#39;demo 目录的绝对路径&#39;))</code></li>
+<li><code>/aa/css/a.css</code></li>
+<li><code>/aa/**/*.*</code></li>
 </ul>
 </li>
-<li>其他方法<ul>
-<li><code>trim()；</code>  //只能去除字符串前后的空白</li>
-<li><code>split()；</code>  //把字符串切割成字符数组，参数是什么，就以什么来分割；</li>
-</ul>
-</li>
-<li>大小写转换方法<ul>
-<li><code>to(Locale)UpperCase();</code>  //转换大写</li>
-<li><code>to(Locale)LowerCase();</code>  //转换小写</li>
-</ul>
-</li>
-<li>匹配方法<ul>
-<li><code>search();</code></li>
-<li><code>replace();</code>//从左往右找，找到一个替换后就返回</li>
-</ul>
-</li>
-<li><ul>
-<li><code>localeCompare();</code>  //两个字符串比较的是ASCII码</li>
-<li><code>s1.localeCompare(s2);</code><ul>
-<li>s1  &gt;  s2 返回正数，一般是1</li>
-<li>s1  ==  s2 返回0</li>
-<li>s1  &lt;  s2  返回负数，一般是-1</li>
+<li>将目录 static 资源暴露出来，可以通过 <code>/static/*</code> 或者 <code>/aa/*</code> 的形式进行访问 <ul>
+<li><code>app.use(&#39;/aa/&#39;, express.static(&#39;static 目录的绝对路径&#39;))</code></li>
+<li><code>app.use(&#39;/static/&#39;, express.static(&#39;static 目录的绝对路径&#39;))</code></li>
+<li>上面的形式就是把 static 目录中的资源提供了两种形式，既能以 <code>/static/</code> 为前缀进行访问也可以以 <code>/aa/</code> 的前缀进行访问</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>fromCharCode()<ul>
-<li><code>String.fromCharCode(101,102,103);</code> //把ASCII码转换成字符串.</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-
+<h3 id="路由系统"><a href="#路由系统" class="headerlink" title="路由系统"></a>路由系统</h3><h3 id="在-Express-配置使用-ejs-模板引擎"><a href="#在-Express-配置使用-ejs-模板引擎" class="headerlink" title="在 Express 配置使用 ejs 模板引擎"></a>在 Express 配置使用 ejs 模板引擎</h3><p>Express 这个框架很精简，默认是不支持模板引擎的，需要配合一些第三方的模板引擎来结合使用，<br>例如这里将 <code>ejs</code> 和 <code>express</code> 结合起来使用：</p>
+<p>第一：安装 <code>ejs</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save ejs</div></pre></td></tr></table></figure>
+<p>第二：在代码中配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.set(<span class="string">'views'</span>, 模板文件存储路径) <span class="comment">// 注意，这里可以不配置，因为 Express 默认会去项目中的 `views` 目录进行查找</span></div><div class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>) <span class="comment">// 这里表示让 Express 中的 res.render 方法使用 ejs 模板引擎，这里的 ejs 就是你安装的那个模板引擎的包名</span></div></pre></td></tr></table></figure>
+<p>只要经过了上面这种配置，然后 res 对象上就会自动多出一个方法：<code>res.render</code> ,使用方式和咱们之前<br>自己封装的一样：<code>res.render(&#39;视图名称&#39;, {要解析替换的对象数据})</code></p>
+<p>注意：使用了 ejs 模板引擎，默认视图文件后缀名必须是 <code>.ejs</code>，否则 render 方法找不到。<br>如果想要修改，可以像下面这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app.set('view enginge', 'ejs')</span></div><div class="line"><span class="comment">// 将上面这句配置改为下面的形式，就修改了默认的 .ejs 后缀名</span></div><div class="line">app.engine(<span class="string">'.html'</span>, <span class="built_in">require</span>(<span class="string">'ejs'</span>).__express)</div><div class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>)</div></pre></td></tr></table></figure>
+<h3 id="在-Express-中配置使用-body-parser-插件解析处理表单-POST-请求体"><a href="#在-Express-中配置使用-body-parser-插件解析处理表单-POST-请求体" class="headerlink" title="在 Express 中配置使用 body-parser 插件解析处理表单 POST 请求体"></a>在 Express 中配置使用 <code>body-parser</code> 插件解析处理表单 POST 请求体</h3><p>第一步：安装 <code>body-parser</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save body-parser</div></pre></td></tr></table></figure>
+<p>第二步，在代码中进行配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</div><div class="line">app.use(bodyParser.json())</div></pre></td></tr></table></figure>
+<p>只要经过上面的安装配置，则在任意的 post 处理函数中都可以直接通过 <code>req.body</code> 来获取表单 POST 请求体数据。</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.post(<span class="string">'login'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">  <span class="comment">// 这里可以直接通过 req.body 来获取表单 POST 请求体数据</span></div><div class="line">  <span class="built_in">console</span>.log(req.body)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><h3 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h3>
       
     </div>
     
@@ -468,13 +400,13 @@ target新窗口的">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/03/09/BOM/">BOM</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/01/express框架/">express</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">echo</a></p>
-        <p><span>发布时间:</span>2015-03-09, 19:10:35</p>
-        <p><span>最后更新:</span>2017-02-28, 20:51:08</p>
+        <p><span>发布时间:</span>2016-09-01, 18:13:42</p>
+        <p><span>最后更新:</span>2017-03-01, 20:53:14</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/03/09/BOM/" title="BOM">http://yoursite.com/2015/03/09/BOM/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2015/03/09/BOM/　　作者: echo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/01/express框架/" title="express">http://yoursite.com/2016/09/01/express框架/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/01/express框架/　　作者: echo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -487,15 +419,15 @@ target新窗口的">
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/03/17/HTML5/">
-                    THML5基础知识
+                <a href="/2016/09/03/mongodb/">
+                    MongoDB
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/02/27/js高级/">
-                    js高级
+                <a href="/2016/08/26/node基础/">
+                    node基础
                 </a>
             </div>
         
@@ -507,7 +439,7 @@ target新窗口的">
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM"><span class="toc-number">1.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#window对象"><span class="toc-number">1.1.</span> <span class="toc-text">window对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定时器"><span class="toc-number">1.1.1.</span> <span class="toc-text">定时器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#location对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">location对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#screen对象"><span class="toc-number">1.1.3.</span> <span class="toc-text">screen对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#navigator对象"><span class="toc-number">1.1.4.</span> <span class="toc-text">navigator对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history对象"><span class="toc-number">1.1.5.</span> <span class="toc-text">history对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date对象"><span class="toc-number">1.2.</span> <span class="toc-text">Date对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本包装类型"><span class="toc-number">1.3.</span> <span class="toc-text">基本包装类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String类型"><span class="toc-number">1.3.1.</span> <span class="toc-text">String类型</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#package-json-文件"><span class="toc-number">1.</span> <span class="toc-text">package.json 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Express"><span class="toc-number">2.</span> <span class="toc-text">Express</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hello-world"><span class="toc-number">2.1.</span> <span class="toc-text">hello-world</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理静态资源"><span class="toc-number">2.2.</span> <span class="toc-text">处理静态资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由系统"><span class="toc-number">2.3.</span> <span class="toc-text">路由系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Express-配置使用-ejs-模板引擎"><span class="toc-number">2.4.</span> <span class="toc-text">在 Express 配置使用 ejs 模板引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Express-中配置使用-body-parser-插件解析处理表单-POST-请求体"><span class="toc-number">2.5.</span> <span class="toc-text">在 Express 中配置使用 body-parser 插件解析处理表单 POST 请求体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中间件"><span class="toc-number">2.6.</span> <span class="toc-text">中间件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误处理"><span class="toc-number">2.7.</span> <span class="toc-text">错误处理</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -543,7 +475,7 @@ target新窗口的">
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"BOM　| 依旋的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"express　| 依旋的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -563,7 +495,7 @@ target新窗口的">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/03/17/HTML5/" title="上一篇: THML5基础知识">
+            <a href="/2016/09/03/mongodb/" title="上一篇: MongoDB">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -571,7 +503,7 @@ target新窗口的">
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/02/27/js高级/" title="下一篇: js高级">
+            <a href="/2016/08/26/node基础/" title="下一篇: node基础">
                 <i class="fa fa-angle-right"></i>
             </a>
         
