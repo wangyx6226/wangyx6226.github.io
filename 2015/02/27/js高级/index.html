@@ -200,11 +200,11 @@ demo.style.height可以 设置 行内样式，o">
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa Email" href="/wangyx6226@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                                <a class="fa 新浪微博" href="http://weibo.com/u/5541165310" title="新浪微博"></a>
                             
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" href="/wangyx6226.github.io" title="GitHub"></a>
                             
                         </ul>
                     </nav>
@@ -236,7 +236,7 @@ demo.style.height可以 设置 行内样式，o">
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">活泼开朗的东北小女生，自带逗比属性，热爱动漫，专注前端500年。</div>
                 </section>
                 
             </div>
@@ -276,11 +276,11 @@ demo.style.height可以 设置 行内样式，o">
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="/wangyx6226@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/u/5541165310" title="新浪微博"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" target="_blank" href="/wangyx6226.github.io" title="GitHub"></a>
                             
                         </ul>
             </nav>
@@ -484,7 +484,7 @@ leader = leader + step
 </li>
 <li>事件捕获<br> btn.addEventListener(“click”,handle,true);<br> 最后一个参数为true-事件捕获</li>
 <li><p>事件冒泡<br> 当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。<br> btn.addEventListener(element,”click”,false);<br> 最后一个参数为false-事件冒泡<br> 大多数浏览器都支持-推荐使用的方式</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"father"</span>&gt;</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"father"</span>&gt;</div><div class="line">    &lt;div id="son"&gt;&lt;/div&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
 <pre><code>son--&gt;father--&gt;document.body--&gt;document.documentElement(html)--&gt;document--&gt;window
 </code></pre><p> 事件传播的三个阶段是：</p>
 <ul>
@@ -724,11 +724,12 @@ leader = leader + step
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 echo
+                2015-2017 echo
             </div>
-            <div class="footer-right">
+<!--            <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
+-->
         </div>
         
             <div class="visit">
@@ -751,6 +752,7 @@ leader = leader + step
         
     </div>
 </footer>
+
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
@@ -801,6 +803,23 @@ leader = leader + step
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
